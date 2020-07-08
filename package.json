@@ -1,6 +1,6 @@
 {
-  "name": "typescript-parser",
-  "version": "0.0.0-development",
+  "name": "typescript-parser-es5",
+  "version": "1.0.0",
   "description": "Parser for typescript (and javascript) files, that compiles those files and generates a human understandable AST.",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -51,5 +51,9 @@
     "lodash-es": "^4.17.10",
     "tslib": "^1.9.3",
     "typescript": "^3.0.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
