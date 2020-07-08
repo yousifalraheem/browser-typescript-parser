@@ -9,7 +9,11 @@ coverage/
 test/
 
 # typescript
+src/
 build/
+tsconfig.json
+config/
+tslint.json
 jest.json
 .travis.yml
 
