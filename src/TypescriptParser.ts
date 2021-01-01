@@ -1,5 +1,3 @@
-import { readFileSync } from 'fs';
-import { parse } from 'path';
 import {
     ClassDeclaration,
     createSourceFile,
@@ -64,61 +62,6 @@ export class TypescriptParser {
                 true,
                 scriptKind),
             '/');
-    }
-
-    /**
-     * Parses a single file into a parsed file.
-     *
-     * @param {string} filePath
-     * @param {string} rootPath
-     * @returns {Promise<File>}
-     *
-     * @memberof TsResourceParser
-     */
-    public async parseFile(filePath: string, rootPath: string): Promise<File> {
-        const parse = await this.parseFiles([filePath], rootPath);
-        return parse[0];
-    }
-
-    /**
-     * Parses multiple files into parsed files.
-     *
-     * @param {string[]} filePathes
-     * @param {string} rootPath
-     * @returns {Promise<File[]>}
-     *
-     * @memberof TsResourceParser
-     */
-    public async parseFiles(
-        filePathes: string[],
-        rootPath: string): Promise<File[]> {
-        return filePathes
-            .map((o) => {
-                let scriptKind: ScriptKind = ScriptKind.Unknown;
-                const parsed = parse(o);
-                switch (parsed.ext.toLowerCase()) {
-                    case 'js':
-                        scriptKind = ScriptKind.JS;
-                        break;
-                    case 'jsx':
-                        scriptKind = ScriptKind.JSX;
-                        break;
-                    case 'ts':
-                        scriptKind = ScriptKind.TS;
-                        break;
-                    case 'tsx':
-                        scriptKind = ScriptKind.TSX;
-                        break;
-                }
-                return createSourceFile(
-                    o,
-                    readFileSync(o).toString(),
-                    ScriptTarget.ES2015,
-                    true,
-                    scriptKind,
-                );
-            })
-            .map(o => this.parseTypescript(o, rootPath));
     }
 
     /**
