@@ -1,4 +1,4 @@
-# node typescript parser
+# browser typescript parser
 
 This package is a TypeScript and ECMAScript parser. It uses the underlying typescript parser to generate
 a more or less human readable AST out of .js or .ts files.
@@ -26,9 +26,6 @@ const parser = new TypescriptParser();
 
 // either:
 const parsed = await parser.parseSource(/* typescript source code as string */);
-
-// or a filepath
-const parsed = await parser.parseFile('/user/myfile.ts', 'workspace root');
 ```
 
 You can also parse multiple files at ones.
