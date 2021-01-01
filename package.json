@@ -1,59 +1,96 @@
 {
-  "name": "typescript-parser-es5",
-  "version": "1.0.0",
-  "description": "Parser for typescript (and javascript) files, that compiles those files and generates a human understandable AST.",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "scripts": {
-    "build": "npm run clean && tsc -p ./config/tsconfig.build.json",
-    "prepare": "npm run build",
-    "clean": "del-cli ./build ./coverage",
-    "develop": "npm run clean && tsc -p .",
-    "lint": "tslint -c ./tslint.json -p ./config/tsconfig.build.json 'src/**/*.ts'",
-    "test": "npm run lint && npm run clean && jest -c ./jest.json",
-    "test:watch": "npm run clean && jest -c ./jest.json --watch --no-coverage",
-    "typedoc": "del-cli ./docs && typedoc --ignoreCompilerErrors --out ./docs --mode file --tsconfig ./config/tsconfig.build.json ./src/",
-    "semantic-release": "semantic-release"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TypeScript-Heroes/node-typescript-parser.git"
-  },
-  "keywords": [
-    "typescript",
-    "parser",
-    "AST",
-    "parsing"
-  ],
-  "author": "Christoph Bühler <christoph.buehler@bluewin.ch>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TypeScript-Heroes/node-typescript-parser/issues"
-  },
-  "homepage": "https://github.com/TypeScript-Heroes/node-typescript-parser#readme",
-  "devDependencies": {
-    "@smartive/tslint-config": "^4.0.0",
-    "@types/jest": "^23.3.1",
-    "@types/lodash-es": "^4.17.1",
-    "@types/mock-fs": "^3.6.30",
-    "@types/node": "^10.9.4",
-    "del-cli": "^1.1.0",
-    "jest": "^23.5.0",
-    "mock-fs": "^4.6.0",
-    "semantic-release": "^15.9.12",
-    "ts-jest": "^23.1.4",
-    "tslint": "^5.11.0",
-    "tsutils": "^3.0.0",
-    "typedoc": "^0.12.0"
-  },
-  "dependencies": {
-    "lodash": "^4.17.10",
-    "lodash-es": "^4.17.10",
-    "tslib": "^1.9.3",
-    "typescript": "^3.0.3"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  }
+    "name": "typescript-parser-browser",
+    "version": "1.0.0",
+    "description": "Parser for typescript (and javascript) files, that compiles those files and generates a human understandable AST.",
+    "main": "index.js",
+    "typings": "index.d.ts",
+    "scripts": {
+        "predevelop": "del-cli ./build",
+        "develop": "tsc -p .",
+        "lint": "tslint -c ./tslint.json -p ./config/tsconfig.build.json 'src/**/*.ts'",
+        "pretest": "del-cli ./coverage",
+        "test": "npm run lint && jest",
+        "test:watch": "jest --watch --no-coverage",
+        "pretypedoc": "del-cli ./docs",
+        "typedoc": "typedoc --ignoreCompilerErrors --out ./docs --mode file --tsconfig ./config/tsconfig.build.json ./src/",
+        "prebuild": "del-cli ./build ./coverage",
+        "build": "tsc -p ./config/tsconfig.build.json",
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "format:all": "pretty-quick",
+        "format:staged": "pretty-quick --staged",
+        "format:check": "pretty-quick --check",
+        "commit": "git-cz",
+        "semantic-release": "semantic-release"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yousifalraheem/node-typescript-parser.git"
+    },
+    "keywords": [
+        "typescript",
+        "parser",
+        "AST",
+        "parsing"
+    ],
+    "author": "Yousif Al-Raheem <yousifalraheem@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yousifalraheem/node-typescript-parser/issues"
+    },
+    "homepage": "https://github.com/yousifalraheem/node-typescript-parser#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "@semantic-release/changelog": "^5.0.1",
+        "@smartive/tslint-config": "^4.0.0",
+        "@types/jest": "^23.3.1",
+        "@types/lodash-es": "^4.17.4",
+        "@types/node": "^10.17.50",
+        "del-cli": "^1.1.0",
+        "husky": "^4.3.6",
+        "jest": "^23.5.0",
+        "prettier": "^2.2.1",
+        "pretty-quick": "^3.1.0",
+        "semantic-release": "^15.9.12",
+        "ts-jest": "^23.1.4",
+        "tslint": "^5.11.0",
+        "tsutils": "^3.0.0",
+        "typedoc": "^0.12.0"
+    },
+    "dependencies": {
+        "lodash": "^4.17.20",
+        "lodash-es": "^4.17.20",
+        "tslib": "^1.14.1",
+        "typescript": "^3.9.7"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint --edit",
+            "pre-commit": "npm run format:staged"
+        }
+    },
+    "release": {
+        "pkgRoot": "lib/dist",
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            "@semantic-release/npm",
+            "@semantic-release/github"
+        ]
+    }
 }
