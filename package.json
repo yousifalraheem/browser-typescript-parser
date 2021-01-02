@@ -20,7 +20,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/yousifalraheem/node-typescript-parser.git"
+        "url": "https://github.com/yousifalraheem/browser-typescript-parser.git"
     },
     "keywords": [
         "typescript",
@@ -31,9 +31,9 @@
     "author": "Yousif Al-Raheem <yousifalraheem@gmail.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/yousifalraheem/node-typescript-parser/issues"
+        "url": "https://github.com/yousifalraheem/browser-typescript-parser/issues"
     },
-    "homepage": "https://github.com/yousifalraheem/node-typescript-parser#readme",
+    "homepage": "https://github.com/yousifalraheem/browser-typescript-parser#readme",
     "dependencies": {
         "lodash": "^4.17.20",
         "lodash-es": "^4.17.20"

@@ -1,0 +1,2491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypescriptParser Declaration parsing Classes should parse a non exported class 1`] = `
+ClassDeclaration {
+  "accessors": Array [],
+  "ctor": ConstructorDeclaration {
+    "end": 178,
+    "name": "NonExportedClass",
+    "parameters": Array [
+      ParameterDeclaration {
+        "_name": "param1",
+        "_type": "string",
+        "end": 173,
+        "start": 152,
+      },
+    ],
+    "start": 140,
+    "variables": Array [],
+  },
+  "end": 316,
+  "isExported": false,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 212,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method1",
+      "parameters": Array [],
+      "start": 186,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 247,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method2",
+      "parameters": Array [],
+      "start": 218,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 1,
+    },
+    MethodDeclaration {
+      "end": 313,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method3",
+      "parameters": Array [],
+      "start": 253,
+      "type": "void",
+      "variables": Array [
+        VariableDeclaration {
+          "end": 306,
+          "isConst": false,
+          "isExported": false,
+          "name": "variable",
+          "start": 288,
+          "type": undefined,
+        },
+      ],
+      "visibility": 0,
+    },
+  ],
+  "name": "NonExportedClass",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 173,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "param1",
+      "start": 152,
+      "type": "string",
+      "visibility": 2,
+    },
+  ],
+  "start": 110,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse abstract property accessors 1`] = `
+Array [
+  GetterDeclaration {
+    "end": 1028,
+    "isAbstract": true,
+    "isStatic": false,
+    "name": "getOnly",
+    "start": 990,
+    "type": "string",
+    "visibility": 2,
+  },
+  SetterDeclaration {
+    "end": 1074,
+    "isAbstract": true,
+    "isStatic": false,
+    "name": "setOnly",
+    "start": 1034,
+    "type": undefined,
+    "visibility": 2,
+  },
+  GetterDeclaration {
+    "end": 1120,
+    "isAbstract": true,
+    "isStatic": false,
+    "name": "getAndSet",
+    "start": 1080,
+    "type": "string",
+    "visibility": 2,
+  },
+  SetterDeclaration {
+    "end": 1171,
+    "isAbstract": true,
+    "isStatic": false,
+    "name": "getAndSet",
+    "start": 1126,
+    "type": undefined,
+    "visibility": 2,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse an abstract class 1`] = `
+ClassDeclaration {
+  "accessors": Array [],
+  "end": 106,
+  "isExported": false,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 56,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method1",
+      "parameters": Array [],
+      "start": 36,
+      "type": undefined,
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 103,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "abstractMethod",
+      "parameters": Array [],
+      "start": 64,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+  ],
+  "name": "AbstractClass",
+  "properties": Array [],
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse an exported class 1`] = `
+ClassDeclaration {
+  "accessors": Array [
+    GetterDeclaration {
+      "end": 515,
+      "isAbstract": false,
+      "isStatic": false,
+      "name": "property",
+      "start": 445,
+      "type": "string",
+      "visibility": 2,
+    },
+    SetterDeclaration {
+      "end": 599,
+      "isAbstract": false,
+      "isStatic": false,
+      "name": "property",
+      "start": 523,
+      "type": undefined,
+      "visibility": 2,
+    },
+  ],
+  "end": 602,
+  "isExported": true,
+  "methods": Array [],
+  "name": "ExportedClass",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 380,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "_property",
+      "start": 354,
+      "type": "string",
+      "visibility": 0,
+    },
+    PropertyDeclaration {
+      "end": 412,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "protect",
+      "start": 386,
+      "type": "string",
+      "visibility": 1,
+    },
+    PropertyDeclaration {
+      "end": 437,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "pub",
+      "start": 418,
+      "type": "string",
+      "visibility": 2,
+    },
+  ],
+  "start": 320,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse object and array destructure pattern in a class constructor 1`] = `
+ConstructorDeclaration {
+  "end": 1256,
+  "name": "ObjAndArrDestruct",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": undefined,
+      "end": 1225,
+      "start": 1223,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 1229,
+      "start": 1227,
+    },
+    ParameterDeclaration {
+      "_name": "p3",
+      "_type": undefined,
+      "end": 1241,
+      "start": 1239,
+    },
+    ParameterDeclaration {
+      "_name": "p4",
+      "_type": undefined,
+      "end": 1245,
+      "start": 1243,
+    },
+  ],
+  "start": 1209,
+  "variables": Array [],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse object and array destructure pattern in a class method 1`] = `
+Array [
+  MethodDeclaration {
+    "end": 1311,
+    "isAbstract": false,
+    "isAsync": false,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "objMethod",
+    "parameters": Array [
+      ObjectBoundParameterDeclaration {
+        "_name": "",
+        "_type": "",
+        "end": 1300,
+        "endCharacter": "}",
+        "parameters": Array [
+          ParameterDeclaration {
+            "_name": "p1",
+            "_type": undefined,
+            "end": 1285,
+            "start": 1283,
+          },
+          ParameterDeclaration {
+            "_name": "p2",
+            "_type": undefined,
+            "end": 1289,
+            "start": 1287,
+          },
+          ParameterDeclaration {
+            "_name": "p3",
+            "_type": undefined,
+            "end": 1293,
+            "start": 1291,
+          },
+        ],
+        "start": 1281,
+        "startCharacter": "{",
+      },
+    ],
+    "start": 1264,
+    "type": "void",
+    "variables": Array [],
+    "visibility": 2,
+  },
+  MethodDeclaration {
+    "end": 1369,
+    "isAbstract": false,
+    "isAsync": false,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "arrMethod",
+    "parameters": Array [
+      ArrayBoundParameterDeclaration {
+        "_name": "",
+        "_type": "",
+        "end": 1358,
+        "endCharacter": "]",
+        "parameters": Array [
+          ParameterDeclaration {
+            "_name": "p1",
+            "_type": undefined,
+            "end": 1339,
+            "start": 1337,
+          },
+          ParameterDeclaration {
+            "_name": "p2",
+            "_type": undefined,
+            "end": 1343,
+            "start": 1341,
+          },
+          ParameterDeclaration {
+            "_name": "p3",
+            "_type": undefined,
+            "end": 1347,
+            "start": 1345,
+          },
+        ],
+        "start": 1336,
+        "startCharacter": "[",
+      },
+    ],
+    "start": 1319,
+    "type": "void",
+    "variables": Array [],
+    "visibility": 2,
+  },
+  MethodDeclaration {
+    "end": 1450,
+    "isAbstract": false,
+    "isAsync": false,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "objAndArrMethod",
+    "parameters": Array [
+      ArrayBoundParameterDeclaration {
+        "_name": "",
+        "_type": "",
+        "end": 1422,
+        "endCharacter": "]",
+        "parameters": Array [
+          ParameterDeclaration {
+            "_name": "p1",
+            "_type": undefined,
+            "end": 1403,
+            "start": 1401,
+          },
+          ParameterDeclaration {
+            "_name": "p2",
+            "_type": undefined,
+            "end": 1407,
+            "start": 1405,
+          },
+          ParameterDeclaration {
+            "_name": "p3",
+            "_type": undefined,
+            "end": 1411,
+            "start": 1409,
+          },
+        ],
+        "start": 1400,
+        "startCharacter": "[",
+      },
+      ObjectBoundParameterDeclaration {
+        "_name": "",
+        "_type": "",
+        "end": 1439,
+        "endCharacter": "}",
+        "parameters": Array [
+          ParameterDeclaration {
+            "_name": "p4",
+            "_type": undefined,
+            "end": 1428,
+            "start": 1426,
+          },
+          ParameterDeclaration {
+            "_name": "p5",
+            "_type": undefined,
+            "end": 1432,
+            "start": 1430,
+          },
+        ],
+        "start": 1424,
+        "startCharacter": "{",
+      },
+    ],
+    "start": 1377,
+    "type": "void",
+    "variables": Array [],
+    "visibility": 2,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse optional class properties 1`] = `
+Array [
+  PropertyDeclaration {
+    "end": 1516,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "nonOptional",
+    "start": 1489,
+    "type": "string",
+    "visibility": 2,
+  },
+  PropertyDeclaration {
+    "end": 1567,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "nonOptionalAsWell",
+    "start": 1522,
+    "type": "string | undefined",
+    "visibility": 2,
+  },
+  PropertyDeclaration {
+    "end": 1598,
+    "isOptional": true,
+    "isStatic": false,
+    "name": "optional",
+    "start": 1573,
+    "type": "string",
+    "visibility": 2,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse property accessors 1`] = `
+Array [
+  GetterDeclaration {
+    "end": 767,
+    "isAbstract": false,
+    "isStatic": false,
+    "name": "getOnly",
+    "start": 704,
+    "type": "string",
+    "visibility": 2,
+  },
+  SetterDeclaration {
+    "end": 814,
+    "isAbstract": false,
+    "isStatic": false,
+    "name": "setOnly",
+    "start": 775,
+    "type": undefined,
+    "visibility": 2,
+  },
+  GetterDeclaration {
+    "end": 881,
+    "isAbstract": false,
+    "isStatic": false,
+    "name": "getAndSet",
+    "start": 822,
+    "type": "string",
+    "visibility": 2,
+  },
+  SetterDeclaration {
+    "end": 935,
+    "isAbstract": false,
+    "isStatic": false,
+    "name": "getAndSet",
+    "start": 889,
+    "type": undefined,
+    "visibility": 2,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Classes should parse static class properties and methods 1`] = `
+ClassDeclaration {
+  "accessors": Array [],
+  "end": 1739,
+  "isExported": false,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 1696,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": true,
+      "name": "method",
+      "parameters": Array [],
+      "start": 1664,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 1736,
+      "isAbstract": false,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "methodNonStatic",
+      "parameters": Array [],
+      "start": 1702,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+  ],
+  "name": "StaticThings",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 1658,
+      "isOptional": false,
+      "isStatic": true,
+      "name": "prop",
+      "start": 1631,
+      "type": "string",
+      "visibility": 2,
+    },
+  ],
+  "start": 1605,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Enums should parse an enum correctly 1`] = `
+EnumDeclaration {
+  "end": 62,
+  "isExported": false,
+  "members": Array [
+    "Member1",
+    "Member2",
+    "Member3",
+  ],
+  "name": "Enumeration",
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Enums should parse an exported enum correctly 1`] = `
+EnumDeclaration {
+  "end": 145,
+  "isExported": true,
+  "members": Array [
+    "ConstMember1",
+    "ConstMember2",
+  ],
+  "name": "ConstantEnumeration",
+  "start": 66,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse a function correctly 1`] = `
+FunctionDeclaration {
+  "end": 87,
+  "isAsync": false,
+  "isExported": false,
+  "name": "function1",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "param1",
+      "_type": undefined,
+      "end": 25,
+      "start": 19,
+    },
+  ],
+  "start": 0,
+  "type": "string",
+  "variables": Array [
+    VariableDeclaration {
+      "end": 62,
+      "isConst": false,
+      "isExported": false,
+      "name": "var1",
+      "start": 42,
+      "type": undefined,
+    },
+  ],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse an exported function correctly 1`] = `
+FunctionDeclaration {
+  "end": 226,
+  "isAsync": false,
+  "isExported": true,
+  "name": "function2",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "param1",
+      "_type": "string",
+      "end": 131,
+      "start": 117,
+    },
+    ObjectBoundParameterDeclaration {
+      "_name": "",
+      "_type": "",
+      "end": 157,
+      "endCharacter": "}",
+      "parameters": Array [
+        ParameterDeclaration {
+          "_name": "objParam1",
+          "_type": undefined,
+          "end": 144,
+          "start": 135,
+        },
+        ParameterDeclaration {
+          "_name": "objParam2",
+          "_type": undefined,
+          "end": 155,
+          "start": 146,
+        },
+      ],
+      "start": 133,
+      "startCharacter": "{",
+    },
+    ArrayBoundParameterDeclaration {
+      "_name": "",
+      "_type": "",
+      "end": 181,
+      "endCharacter": "]",
+      "parameters": Array [
+        ParameterDeclaration {
+          "_name": "arrParam1",
+          "_type": undefined,
+          "end": 169,
+          "start": 160,
+        },
+        ParameterDeclaration {
+          "_name": "arrParam2",
+          "_type": undefined,
+          "end": 180,
+          "start": 171,
+        },
+      ],
+      "start": 159,
+      "startCharacter": "[",
+    },
+  ],
+  "start": 91,
+  "type": "void",
+  "variables": Array [
+    VariableDeclaration {
+      "end": 223,
+      "isConst": true,
+      "isExported": false,
+      "name": "constVar1",
+      "start": 196,
+      "type": undefined,
+    },
+  ],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse parameters correctly 1`] = `
+Array [
+  ParameterDeclaration {
+    "_name": "param1",
+    "_type": undefined,
+    "end": 25,
+    "start": 19,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse parameters correctly 2`] = `
+Array [
+  ParameterDeclaration {
+    "_name": "param1",
+    "_type": "string",
+    "end": 131,
+    "start": 117,
+  },
+  ObjectBoundParameterDeclaration {
+    "_name": "",
+    "_type": "",
+    "end": 157,
+    "endCharacter": "}",
+    "parameters": Array [
+      ParameterDeclaration {
+        "_name": "objParam1",
+        "_type": undefined,
+        "end": 144,
+        "start": 135,
+      },
+      ParameterDeclaration {
+        "_name": "objParam2",
+        "_type": undefined,
+        "end": 155,
+        "start": 146,
+      },
+    ],
+    "start": 133,
+    "startCharacter": "{",
+  },
+  ArrayBoundParameterDeclaration {
+    "_name": "",
+    "_type": "",
+    "end": 181,
+    "endCharacter": "]",
+    "parameters": Array [
+      ParameterDeclaration {
+        "_name": "arrParam1",
+        "_type": undefined,
+        "end": 169,
+        "start": 160,
+      },
+      ParameterDeclaration {
+        "_name": "arrParam2",
+        "_type": undefined,
+        "end": 180,
+        "start": 171,
+      },
+    ],
+    "start": 159,
+    "startCharacter": "[",
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse variables correctly 1`] = `
+Array [
+  VariableDeclaration {
+    "end": 62,
+    "isConst": false,
+    "isExported": false,
+    "name": "var1",
+    "start": 42,
+    "type": undefined,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Functions should parse variables correctly 2`] = `
+Array [
+  VariableDeclaration {
+    "end": 223,
+    "isConst": true,
+    "isExported": false,
+    "name": "constVar1",
+    "start": 196,
+    "type": undefined,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Interfaces should parse a non exported interface 1`] = `
+InterfaceDeclaration {
+  "accessors": Array [],
+  "end": 135,
+  "isExported": false,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 96,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method1",
+      "parameters": Array [],
+      "start": 86,
+      "type": undefined,
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 132,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method2",
+      "parameters": Array [
+        ParameterDeclaration {
+          "_name": "param1",
+          "_type": "string",
+          "end": 124,
+          "start": 110,
+        },
+      ],
+      "start": 102,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+  ],
+  "name": "NonExportedInterface",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 56,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "property1",
+      "start": 38,
+      "type": "string",
+      "visibility": 2,
+    },
+    PropertyDeclaration {
+      "end": 80,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "property2",
+      "start": 62,
+      "type": "number",
+      "visibility": 2,
+    },
+  ],
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Interfaces should parse an exported interface 1`] = `
+InterfaceDeclaration {
+  "accessors": Array [],
+  "end": 298,
+  "isExported": true,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 257,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method1",
+      "parameters": Array [
+        ObjectBoundParameterDeclaration {
+          "_name": "",
+          "_type": "",
+          "end": 255,
+          "endCharacter": "}",
+          "parameters": Array [
+            ParameterDeclaration {
+              "_name": "param1",
+              "_type": undefined,
+              "end": 245,
+              "start": 239,
+            },
+            ParameterDeclaration {
+              "_name": "param2",
+              "_type": undefined,
+              "end": 253,
+              "start": 247,
+            },
+          ],
+          "start": 237,
+          "startCharacter": "{",
+        },
+      ],
+      "start": 229,
+      "type": undefined,
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 295,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "method2",
+      "parameters": Array [
+        ArrayBoundParameterDeclaration {
+          "_name": "",
+          "_type": "",
+          "end": 287,
+          "endCharacter": "]",
+          "parameters": Array [
+            ParameterDeclaration {
+              "_name": "param1",
+              "_type": undefined,
+              "end": 278,
+              "start": 272,
+            },
+            ParameterDeclaration {
+              "_name": "param2",
+              "_type": undefined,
+              "end": 286,
+              "start": 280,
+            },
+          ],
+          "start": 271,
+          "startCharacter": "[",
+        },
+      ],
+      "start": 263,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+  ],
+  "name": "ExportedInterface",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 199,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "property1",
+      "start": 181,
+      "type": "string",
+      "visibility": 2,
+    },
+    PropertyDeclaration {
+      "end": 223,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "property2",
+      "start": 205,
+      "type": "number",
+      "visibility": 2,
+    },
+  ],
+  "start": 139,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Interfaces should parse optional functions 1`] = `
+InterfaceDeclaration {
+  "accessors": Array [],
+  "end": 743,
+  "isExported": false,
+  "methods": Array [
+    MethodDeclaration {
+      "end": 707,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "nonOptionalFunction2",
+      "parameters": Array [],
+      "start": 678,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+    MethodDeclaration {
+      "end": 740,
+      "isAbstract": true,
+      "isAsync": false,
+      "isOptional": true,
+      "isStatic": false,
+      "name": "optionalFunction3",
+      "parameters": Array [],
+      "start": 713,
+      "type": "void",
+      "variables": Array [],
+      "visibility": 2,
+    },
+  ],
+  "name": "OptionalFunctionInterface",
+  "properties": Array [
+    PropertyDeclaration {
+      "end": 596,
+      "isOptional": false,
+      "isStatic": false,
+      "name": "nonOptionalFunction1",
+      "start": 563,
+      "type": "() => void",
+      "visibility": 2,
+    },
+    PropertyDeclaration {
+      "end": 635,
+      "isOptional": true,
+      "isStatic": false,
+      "name": "optionalFunction1",
+      "start": 602,
+      "type": "{ (): void }",
+      "visibility": 2,
+    },
+    PropertyDeclaration {
+      "end": 672,
+      "isOptional": true,
+      "isStatic": false,
+      "name": "optionalFunction2",
+      "start": 641,
+      "type": "() => void",
+      "visibility": 2,
+    },
+  ],
+  "start": 520,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Interfaces should parse optional properties 1`] = `
+Array [
+  PropertyDeclaration {
+    "end": 440,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "nonOptional",
+    "start": 420,
+    "type": "string",
+    "visibility": 2,
+  },
+  PropertyDeclaration {
+    "end": 489,
+    "isOptional": false,
+    "isStatic": false,
+    "name": "alsoNonOptional",
+    "start": 446,
+    "type": "string | null | undefined",
+    "visibility": 2,
+  },
+  PropertyDeclaration {
+    "end": 513,
+    "isOptional": true,
+    "isStatic": false,
+    "name": "optional",
+    "start": 495,
+    "type": "string",
+    "visibility": 2,
+  },
+]
+`;
+
+exports[`TypescriptParser Declaration parsing Modules should parse a module 1`] = `
+Module {
+  "declarations": Array [
+    FunctionDeclaration {
+      "end": 63,
+      "isAsync": false,
+      "isExported": true,
+      "name": "modFunc",
+      "parameters": Array [],
+      "start": 31,
+      "type": "void",
+      "variables": Array [],
+    },
+  ],
+  "end": 66,
+  "exports": Array [],
+  "imports": Array [],
+  "name": "Module",
+  "resources": Array [],
+  "start": 0,
+  "usages": Array [],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Modules should parse a namespace 1`] = `
+Namespace {
+  "declarations": Array [
+    ClassDeclaration {
+      "accessors": Array [],
+      "end": 126,
+      "isExported": false,
+      "methods": Array [],
+      "name": "NotExported",
+      "properties": Array [],
+      "start": 105,
+    },
+    EnumDeclaration {
+      "end": 198,
+      "isExported": true,
+      "members": Array [
+        "MemberA",
+        "MemberB",
+      ],
+      "name": "Exported",
+      "start": 134,
+    },
+  ],
+  "end": 201,
+  "exports": Array [],
+  "imports": Array [],
+  "name": "Namespace",
+  "resources": Array [],
+  "start": 70,
+  "usages": Array [
+    "Namespace",
+    "MemberA",
+    "MemberB",
+  ],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should generate the correct name for an array 1`] = `"[ p1, p2 ]"`;
+
+exports[`TypescriptParser Declaration parsing Parameters should generate the correct name for an object 1`] = `"{ p1, p2 }"`;
+
+exports[`TypescriptParser Declaration parsing Parameters should generate the correct type for an array 1`] = `"{ string, Type }"`;
+
+exports[`TypescriptParser Declaration parsing Parameters should generate the correct type for an object 1`] = `"{ string, number }"`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse a normal parameter 1`] = `
+ParameterDeclaration {
+  "_name": "p1",
+  "_type": "string",
+  "end": 26,
+  "start": 16,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse a simple array binding pattern 1`] = `
+ArrayBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 68,
+  "endCharacter": "]",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": undefined,
+      "end": 63,
+      "start": 61,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 67,
+      "start": 65,
+    },
+  ],
+  "start": 60,
+  "startCharacter": "[",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse a simple object binding pattern  1`] = `
+ObjectBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 291,
+  "endCharacter": "}",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": undefined,
+      "end": 285,
+      "start": 283,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 289,
+      "start": 287,
+    },
+  ],
+  "start": 281,
+  "startCharacter": "{",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an array with overtyped tuple type 1`] = `
+ArrayBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 247,
+  "endCharacter": "]",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 215,
+      "start": 213,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": "number",
+      "end": 219,
+      "start": 217,
+    },
+  ],
+  "start": 212,
+  "startCharacter": "[",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an array with tuple type 1`] = `
+ArrayBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 126,
+  "endCharacter": "]",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 105,
+      "start": 103,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": "Type",
+      "end": 109,
+      "start": 107,
+    },
+  ],
+  "start": 102,
+  "startCharacter": "[",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an array with undertyped tuple type 1`] = `
+ArrayBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 178,
+  "endCharacter": "]",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 163,
+      "start": 161,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 167,
+      "start": 165,
+    },
+  ],
+  "start": 160,
+  "startCharacter": "[",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an object with overtyped type literal 1`] = `
+ObjectBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 556,
+  "endCharacter": "}",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 509,
+      "start": 507,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": "number",
+      "end": 513,
+      "start": 511,
+    },
+  ],
+  "start": 505,
+  "startCharacter": "{",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an object with type literal 1`] = `
+ObjectBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 411,
+  "endCharacter": "}",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 379,
+      "start": 377,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": "Type",
+      "end": 383,
+      "start": 381,
+    },
+  ],
+  "start": 375,
+  "startCharacter": "{",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an object with type reference 1`] = `
+ObjectBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 341,
+  "endCharacter": "}",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": undefined,
+      "end": 329,
+      "start": 327,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 333,
+      "start": 331,
+    },
+  ],
+  "start": 325,
+  "startCharacter": "{",
+  "typeReference": "Type",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse an object with undertyped type literal 1`] = `
+ObjectBoundParameterDeclaration {
+  "_name": "",
+  "_type": "",
+  "end": 471,
+  "endCharacter": "}",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 449,
+      "start": 447,
+    },
+    ParameterDeclaration {
+      "_name": "p2",
+      "_type": undefined,
+      "end": 453,
+      "start": 451,
+    },
+  ],
+  "start": 445,
+  "startCharacter": "{",
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Parameters should parse some mixed parameters (all above) 1`] = `
+FunctionDeclaration {
+  "end": 674,
+  "isAsync": false,
+  "isExported": false,
+  "name": "mixed",
+  "parameters": Array [
+    ParameterDeclaration {
+      "_name": "p1",
+      "_type": "string",
+      "end": 596,
+      "start": 586,
+    },
+    ObjectBoundParameterDeclaration {
+      "_name": "",
+      "_type": "",
+      "end": 636,
+      "endCharacter": "}",
+      "parameters": Array [
+        ParameterDeclaration {
+          "_name": "p2",
+          "_type": "string",
+          "end": 602,
+          "start": 600,
+        },
+        ParameterDeclaration {
+          "_name": "p3",
+          "_type": "number",
+          "end": 606,
+          "start": 604,
+        },
+      ],
+      "start": 598,
+      "startCharacter": "{",
+    },
+    ArrayBoundParameterDeclaration {
+      "_name": "",
+      "_type": "",
+      "end": 663,
+      "endCharacter": "]",
+      "parameters": Array [
+        ParameterDeclaration {
+          "_name": "p4",
+          "_type": "Type",
+          "end": 641,
+          "start": 639,
+        },
+        ParameterDeclaration {
+          "_name": "p5",
+          "_type": "boolean",
+          "end": 645,
+          "start": 643,
+        },
+      ],
+      "start": 638,
+      "startCharacter": "[",
+    },
+  ],
+  "start": 571,
+  "type": "void",
+  "variables": Array [],
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Type aliases should parse a type alias correctly 1`] = `
+TypeAliasDeclaration {
+  "end": 16,
+  "isExported": false,
+  "name": "Alias",
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Type aliases should parse an exported type alias correctly 1`] = `
+TypeAliasDeclaration {
+  "end": 51,
+  "isExported": true,
+  "name": "ExportedAlias",
+  "start": 20,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse a non exported const 1`] = `
+VariableDeclaration {
+  "end": 61,
+  "isConst": true,
+  "isExported": false,
+  "name": "NonExportedConst",
+  "start": 33,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse a non exported variable 1`] = `
+VariableDeclaration {
+  "end": 29,
+  "isConst": false,
+  "isExported": false,
+  "name": "NonExportedVariable",
+  "start": 0,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse an exported const 1`] = `
+VariableDeclaration {
+  "end": 134,
+  "isConst": true,
+  "isExported": true,
+  "name": "ExportedConst",
+  "start": 102,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse an exported multiline variable 1`] = `
+VariableDeclaration {
+  "end": 217,
+  "isConst": false,
+  "isExported": true,
+  "name": "MultiLet1",
+  "start": 170,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse an exported multiline variable 2`] = `
+VariableDeclaration {
+  "end": 217,
+  "isConst": false,
+  "isExported": true,
+  "name": "MultiLet2",
+  "start": 170,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse an exported scope variable 1`] = `
+VariableDeclaration {
+  "end": 166,
+  "isConst": false,
+  "isExported": true,
+  "name": "ExportedLet",
+  "start": 138,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Declaration parsing Variables should parse an exported variable 1`] = `
+VariableDeclaration {
+  "end": 98,
+  "isConst": false,
+  "isExported": true,
+  "name": "ExportedVariable",
+  "start": 65,
+  "type": undefined,
+}
+`;
+
+exports[`TypescriptParser Export parsing should parse default export 1`] = `
+DefaultDeclaration {
+  "end": undefined,
+  "isExported": true,
+  "name": "DefaultExport",
+  "resource": File {
+    "declarations": Array [
+      [Circular],
+    ],
+    "end": 146,
+    "exports": Array [
+      AllExport {
+        "end": 28,
+        "from": "./OtherFile",
+        "start": 0,
+      },
+      NamedExport {
+        "end": 92,
+        "from": "./AnotherFile",
+        "specifiers": Array [
+          SymbolSpecifier {
+            "alias": undefined,
+            "specifier": "Specifier",
+          },
+          SymbolSpecifier {
+            "alias": "Alias",
+            "specifier": "Specifier",
+          },
+        ],
+        "start": 32,
+      },
+      AssignedExport {
+        "declarationIdentifier": "Foo",
+        "end": 109,
+        "resource": [Circular],
+        "start": 96,
+      },
+    ],
+    "imports": Array [],
+    "resources": Array [],
+    "start": 0,
+    "usages": Array [
+      "Specifier",
+      "Alias",
+      "Foo",
+      "DefaultExport",
+    ],
+  },
+  "start": undefined,
+}
+`;
+
+exports[`TypescriptParser Export parsing should parse export all from another file 1`] = `
+AllExport {
+  "end": 28,
+  "from": "./OtherFile",
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser Export parsing should parse export assignment 1`] = `
+AssignedExport {
+  "declarationIdentifier": "Foo",
+  "end": 109,
+  "resource": File {
+    "declarations": Array [
+      DefaultDeclaration {
+        "end": undefined,
+        "isExported": true,
+        "name": "DefaultExport",
+        "resource": [Circular],
+        "start": undefined,
+      },
+    ],
+    "end": 146,
+    "exports": Array [
+      AllExport {
+        "end": 28,
+        "from": "./OtherFile",
+        "start": 0,
+      },
+      NamedExport {
+        "end": 92,
+        "from": "./AnotherFile",
+        "specifiers": Array [
+          SymbolSpecifier {
+            "alias": undefined,
+            "specifier": "Specifier",
+          },
+          SymbolSpecifier {
+            "alias": "Alias",
+            "specifier": "Specifier",
+          },
+        ],
+        "start": 32,
+      },
+      [Circular],
+    ],
+    "imports": Array [],
+    "resources": Array [],
+    "start": 0,
+    "usages": Array [
+      "Specifier",
+      "Alias",
+      "Foo",
+      "DefaultExport",
+    ],
+  },
+  "start": 96,
+}
+`;
+
+exports[`TypescriptParser Export parsing should parse export named from another file 1`] = `
+NamedExport {
+  "end": 92,
+  "from": "./AnotherFile",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier",
+    },
+    SymbolSpecifier {
+      "alias": "Alias",
+      "specifier": "Specifier",
+    },
+  ],
+  "start": 32,
+}
+`;
+
+exports[`TypescriptParser Import parsing should not parse a wrong default statement 1`] = `
+File {
+  "declarations": Array [],
+  "end": 32,
+  "exports": Array [],
+  "filePath": "inline.tsx",
+  "imports": Array [
+    NamedImport {
+      "end": 32,
+      "libraryName": "myLib",
+      "specifiers": Array [
+        SymbolSpecifier {
+          "alias": undefined,
+          "specifier": "default",
+        },
+      ],
+      "start": 0,
+    },
+  ],
+  "resources": Array [],
+  "rootPath": "/",
+  "start": 0,
+  "usages": Array [],
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse a default import 1`] = `
+NamedImport {
+  "defaultAlias": "Foobar",
+  "end": 341,
+  "libraryName": "aFile",
+  "specifiers": Array [],
+  "start": 314,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse a mixed default / named import 1`] = `
+NamedImport {
+  "defaultAlias": "DefaultAlias",
+  "end": 466,
+  "libraryName": "namedImport",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier1",
+    },
+  ],
+  "start": 411,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse a multiline import 1`] = `
+NamedImport {
+  "end": 312,
+  "libraryName": "multiLineImport",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Spec1",
+    },
+    SymbolSpecifier {
+      "alias": "Alias2",
+      "specifier": "Spec2",
+    },
+  ],
+  "start": 244,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse a named import with a default statement 1`] = `
+NamedImport {
+  "defaultAlias": "DefaultAlias",
+  "end": 409,
+  "libraryName": "namedImport",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier1",
+    },
+  ],
+  "start": 343,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse external module import 1`] = `
+ExternalModuleImport {
+  "alias": "external",
+  "end": 242,
+  "libraryName": "externalModule",
+  "start": 198,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse imports 1`] = `
+Array [
+  StringImport {
+    "end": 22,
+    "libraryName": "stringImport",
+    "start": 0,
+  },
+  NamedImport {
+    "end": 89,
+    "libraryName": "namedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Specifier1",
+      },
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Specifier2",
+      },
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Specifier3",
+      },
+    ],
+    "start": 24,
+  },
+  NamedImport {
+    "end": 149,
+    "libraryName": "namedAliasedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": "Alias1",
+        "specifier": "Specifier1",
+      },
+    ],
+    "start": 91,
+  },
+  NamespaceImport {
+    "alias": "namespaceImport",
+    "end": 196,
+    "libraryName": "namespace",
+    "start": 151,
+  },
+  ExternalModuleImport {
+    "alias": "external",
+    "end": 242,
+    "libraryName": "externalModule",
+    "start": 198,
+  },
+  NamedImport {
+    "end": 312,
+    "libraryName": "multiLineImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Spec1",
+      },
+      SymbolSpecifier {
+        "alias": "Alias2",
+        "specifier": "Spec2",
+      },
+    ],
+    "start": 244,
+  },
+  NamedImport {
+    "defaultAlias": "Foobar",
+    "end": 341,
+    "libraryName": "aFile",
+    "specifiers": Array [],
+    "start": 314,
+  },
+  NamedImport {
+    "defaultAlias": "DefaultAlias",
+    "end": 409,
+    "libraryName": "namedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Specifier1",
+      },
+    ],
+    "start": 343,
+  },
+  NamedImport {
+    "defaultAlias": "DefaultAlias",
+    "end": 466,
+    "libraryName": "namedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": undefined,
+        "specifier": "Specifier1",
+      },
+    ],
+    "start": 411,
+  },
+  NamedImport {
+    "defaultAlias": "__DefaultAlias",
+    "end": 552,
+    "libraryName": "namedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": "__Specifier1",
+        "specifier": "Specifier1",
+      },
+    ],
+    "start": 468,
+  },
+  NamedImport {
+    "defaultAlias": "__DefaultAlias",
+    "end": 627,
+    "libraryName": "namedImport",
+    "specifiers": Array [
+      SymbolSpecifier {
+        "alias": "__Specifier1",
+        "specifier": "Specifier1",
+      },
+    ],
+    "start": 554,
+  },
+  NamespaceImport {
+    "alias": "__namespaceImport",
+    "end": 676,
+    "libraryName": "namespace",
+    "start": 629,
+  },
+]
+`;
+
+exports[`TypescriptParser Import parsing should parse named import 1`] = `
+NamedImport {
+  "end": 89,
+  "libraryName": "namedImport",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier1",
+    },
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier2",
+    },
+    SymbolSpecifier {
+      "alias": undefined,
+      "specifier": "Specifier3",
+    },
+  ],
+  "start": 24,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse named import with aliased specifier 1`] = `
+NamedImport {
+  "end": 149,
+  "libraryName": "namedAliasedImport",
+  "specifiers": Array [
+    SymbolSpecifier {
+      "alias": "Alias1",
+      "specifier": "Specifier1",
+    },
+  ],
+  "start": 91,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse namespace import 1`] = `
+NamespaceImport {
+  "alias": "namespaceImport",
+  "end": 196,
+  "libraryName": "namespace",
+  "start": 151,
+}
+`;
+
+exports[`TypescriptParser Import parsing should parse string import 1`] = `
+StringImport {
+  "end": 22,
+  "libraryName": "stringImport",
+  "start": 0,
+}
+`;
+
+exports[`TypescriptParser JSX parsing should parse a simple javascript react file correctly with "parseSource" 1`] = `
+File {
+  "declarations": Array [
+    ClassDeclaration {
+      "accessors": Array [],
+      "end": 320,
+      "isExported": true,
+      "methods": Array [
+        MethodDeclaration {
+          "end": 317,
+          "isAbstract": false,
+          "isAsync": false,
+          "isOptional": false,
+          "isStatic": false,
+          "name": "render",
+          "parameters": Array [],
+          "start": 84,
+          "type": undefined,
+          "variables": Array [],
+          "visibility": undefined,
+        },
+      ],
+      "name": "ES6Class",
+      "properties": Array [],
+      "start": 55,
+    },
+    DefaultDeclaration {
+      "end": undefined,
+      "isExported": true,
+      "name": "ES6Class",
+      "resource": [Circular],
+      "start": undefined,
+    },
+  ],
+  "end": 350,
+  "exports": Array [],
+  "filePath": "inline.tsx",
+  "imports": Array [
+    NamedImport {
+      "defaultAlias": "React",
+      "end": 26,
+      "libraryName": "react",
+      "specifiers": Array [],
+      "start": 0,
+    },
+    NamedImport {
+      "defaultAlias": "$",
+      "end": 51,
+      "libraryName": "jquery",
+      "specifiers": Array [],
+      "start": 28,
+    },
+  ],
+  "resources": Array [],
+  "rootPath": "/",
+  "start": 0,
+  "usages": Array [
+    "div",
+    "Foobar",
+    "AnotherBar",
+    "blub",
+    "p",
+    "sortFunc",
+    "ES6Class",
+  ],
+}
+`;
+
+exports[`TypescriptParser JavaScript parsing should parse a simple javascript file correctly with "parseSource" 1`] = `
+File {
+  "declarations": Array [
+    ClassDeclaration {
+      "accessors": Array [],
+      "ctor": ConstructorDeclaration {
+        "end": 73,
+        "name": "ES6Class",
+        "parameters": Array [],
+        "start": 56,
+        "variables": Array [],
+      },
+      "end": 101,
+      "isExported": true,
+      "methods": Array [
+        MethodDeclaration {
+          "end": 98,
+          "isAbstract": false,
+          "isAsync": false,
+          "isOptional": false,
+          "isStatic": false,
+          "name": "doSomething",
+          "parameters": Array [],
+          "start": 81,
+          "type": undefined,
+          "variables": Array [],
+          "visibility": undefined,
+        },
+      ],
+      "name": "ES6Class",
+      "properties": Array [],
+      "start": 27,
+    },
+    DefaultDeclaration {
+      "end": undefined,
+      "isExported": true,
+      "name": "ES6Class",
+      "resource": [Circular],
+      "start": undefined,
+    },
+  ],
+  "end": 131,
+  "exports": Array [],
+  "filePath": "inline.tsx",
+  "imports": Array [
+    NamedImport {
+      "defaultAlias": "$",
+      "end": 23,
+      "libraryName": "jquery",
+      "specifiers": Array [],
+      "start": 0,
+    },
+  ],
+  "resources": Array [],
+  "rootPath": "/",
+  "start": 0,
+  "usages": Array [
+    "ES6Class",
+  ],
+}
+`;
+
+exports[`TypescriptParser Source parsing should parse a source code string correctly 1`] = `
+File {
+  "declarations": Array [
+    ClassDeclaration {
+      "accessors": Array [],
+      "end": 40,
+      "isExported": false,
+      "methods": Array [],
+      "name": "Foobar",
+      "properties": Array [],
+      "start": 25,
+    },
+    VariableDeclaration {
+      "end": 67,
+      "isConst": true,
+      "isExported": false,
+      "name": "bar",
+      "start": 42,
+      "type": undefined,
+    },
+  ],
+  "end": 67,
+  "exports": Array [],
+  "filePath": "inline.tsx",
+  "imports": Array [
+    NamedImport {
+      "end": 24,
+      "libraryName": "bar",
+      "specifiers": Array [
+        SymbolSpecifier {
+          "alias": undefined,
+          "specifier": "foo",
+        },
+      ],
+      "start": 0,
+    },
+  ],
+  "resources": Array [],
+  "rootPath": "/",
+  "start": 0,
+  "usages": Array [
+    "bar",
+    "Foobar",
+  ],
+}
+`;
+
+exports[`TypescriptParser Specific sources should parse generics in functions in classes correctly 1`] = `
+File {
+  "declarations": Array [
+    ClassDeclaration {
+      "accessors": Array [],
+      "end": 160,
+      "isExported": true,
+      "methods": Array [
+        MethodDeclaration {
+          "end": 142,
+          "isAbstract": false,
+          "isAsync": false,
+          "isOptional": false,
+          "isStatic": false,
+          "name": "test",
+          "parameters": Array [],
+          "start": 45,
+          "type": undefined,
+          "variables": Array [
+            VariableDeclaration {
+              "end": 120,
+              "isConst": false,
+              "isExported": false,
+              "name": "a",
+              "start": 85,
+              "type": undefined,
+            },
+            VariableDeclaration {
+              "end": 117,
+              "isConst": false,
+              "isExported": false,
+              "name": "b",
+              "start": 104,
+              "type": undefined,
+            },
+          ],
+          "visibility": 2,
+        },
+      ],
+      "name": "TestClass",
+      "properties": Array [],
+      "start": 0,
+    },
+  ],
+  "end": 160,
+  "exports": Array [],
+  "filePath": "inline.tsx",
+  "imports": Array [],
+  "resources": Array [],
+  "rootPath": "/",
+  "start": 0,
+  "usages": Array [
+    "a",
+    "T",
+    "b",
+  ],
+}
+`;
+
+exports[`TypescriptParser TSX Usage parsing should parseSource correctly 1`] = `
+Array [
+  "myComponent",
+  "div",
+  "complexComp",
+  "SingleComp",
+  "myFunc",
+  "MyFunc",
+  "foobarVariable",
+  "AnotherComp",
+  "key",
+  "val",
+  "valFunc",
+]
+`;
+
+exports[`TypescriptParser TSX: Specific cases should parse the correct usages with "parseSource" 1`] = `
+Array [
+  "containerStyle",
+  "overflowX",
+  "overflowY",
+  "width",
+  "height",
+  "padding",
+  "monsters",
+  "id",
+  "Monster",
+  "encounters",
+  "Encounter",
+  "characters",
+  "PlayerCharacter",
+  "alignments",
+  "sources",
+  "selectedCampaign",
+  "Campaign",
+  "selectedEncounter",
+  "loadMonsters",
+  "loadEncounters",
+  "saveEncounter",
+  "encounter",
+  "loadEncounter",
+  "deleteEncounter",
+  "encounterArchivedChanged",
+  "archived",
+  "unsavedEdits",
+  "manualCharacters",
+  "level",
+  "count",
+  "playerCharacters",
+  "monster",
+  "showMonster",
+  "saveNewEncounter",
+  "openLoad",
+  "state",
+  "AppState",
+  "ownProps",
+  "Props",
+  "Partial",
+  "Object",
+  "c",
+  "undefined",
+  "dispatch",
+  "Dispatch",
+  "e",
+  "a",
+  "changeEncounterArchived",
+  "manualCharCount",
+  "MenuItem",
+  "value",
+  "key",
+  "primaryText",
+  "manualCharLevel",
+  "playerCount",
+  "monsterCount",
+  "props",
+  "EncounterPlanner",
+  "next",
+  "m",
+  "JSX",
+  "Element",
+  "xp",
+  "sum",
+  "cur",
+  "challengeRatingExperience",
+  "adjusted",
+  "thresholds",
+  "easy",
+  "medium",
+  "hard",
+  "deadly",
+  "encounterDifficulty",
+  "startCase",
+  "k",
+  "div",
+  "Toolbar",
+  "className",
+  "ToolbarGroup",
+  "firstChild",
+  "RaisedButton",
+  "label",
+  "onClick",
+  "primary",
+  "lastChild",
+  "disabled",
+  "secondary",
+  "SaveModal",
+  "title",
+  "text",
+  "onClose",
+  "result",
+  "open",
+  "Row",
+  "Col",
+  "xs",
+  "style",
+  "marginBottom",
+  "h6",
+  "b",
+  "p",
+  "margin",
+  "textAlign",
+  "Divider",
+  "List",
+  "sortBy",
+  "char",
+  "ListItem",
+  "leftCheckbox",
+  "Checkbox",
+  "checked",
+  "cloneDeep",
+  "found",
+  "SelectField",
+  "fullWidth",
+  "autoWidth",
+  "floatingLabelText",
+  "onChange",
+  "event",
+  "index",
+  "parseInt",
+  "IconButton",
+  "marginTop",
+  "ActionDelete",
+  "FlatButton",
+  "fontWeight",
+  "fontSize",
+  "TextField",
+  "type",
+  "min",
+  "step",
+  "tooltip",
+  "tooltipPosition",
+  "ActionSearch",
+  "MonstersOverview",
+  "onMonsterSelected",
+  "showAdd",
+  "encounterPlanner",
+  "Drawer",
+  "openSecondary",
+  "NavigationClose",
+  "MonsterCard",
+  "docked",
+  "onRequestChange",
+  "h5",
+  "marginLeft",
+  "ContentArchive",
+  "ContentUnarchive",
+  "difficulty",
+  "amount",
+  "experienceThresholds",
+  "multiplier",
+  "name",
+  "React",
+  "State",
+  "defaultState",
+  "inline",
+  "connect",
+  "mapStateToProps",
+  "mapDispatchToProps",
+  "StatelessComponent",
+]
+`;
+
+exports[`TypescriptParser TSX: Specific cases should parse the correct usages with "parseSource" 2`] = `
+Array [
+  "props",
+  "Props",
+  "EncounterPlanner",
+  "next",
+  "monsters",
+  "m",
+  "count",
+  "monster",
+  "encounter",
+  "Encounter",
+  "JSX",
+  "Element",
+  "xp",
+  "sum",
+  "cur",
+  "challengeRatingExperience",
+  "adjusted",
+  "thresholds",
+  "easy",
+  "medium",
+  "hard",
+  "deadly",
+  "encounterDifficulty",
+  "startCase",
+  "Object",
+  "k",
+  "div",
+  "Toolbar",
+  "className",
+  "ToolbarGroup",
+  "firstChild",
+  "RaisedButton",
+  "label",
+  "onClick",
+  "primary",
+  "lastChild",
+  "disabled",
+  "secondary",
+  "openLoad",
+  "SaveModal",
+  "title",
+  "text",
+  "onClose",
+  "result",
+  "saveNewEncounter",
+  "open",
+  "Row",
+  "Col",
+  "xs",
+  "style",
+  "containerStyle",
+  "marginBottom",
+  "h6",
+  "b",
+  "p",
+  "margin",
+  "textAlign",
+  "Divider",
+  "List",
+  "sortBy",
+  "c",
+  "char",
+  "key",
+  "ListItem",
+  "primaryText",
+  "leftCheckbox",
+  "Checkbox",
+  "checked",
+  "playerCharacters",
+  "cloneDeep",
+  "found",
+  "SelectField",
+  "fullWidth",
+  "autoWidth",
+  "floatingLabelText",
+  "value",
+  "onChange",
+  "event",
+  "index",
+  "manualCharacters",
+  "parseInt",
+  "manualCharCount",
+  "unsavedEdits",
+  "manualCharLevel",
+  "IconButton",
+  "marginTop",
+  "ActionDelete",
+  "FlatButton",
+  "level",
+  "fontWeight",
+  "fontSize",
+  "TextField",
+  "type",
+  "min",
+  "step",
+  "e",
+  "tooltip",
+  "tooltipPosition",
+  "showMonster",
+  "ActionSearch",
+  "MonstersOverview",
+  "id",
+  "onMonsterSelected",
+  "showAdd",
+  "encounterPlanner",
+  "Drawer",
+  "width",
+  "openSecondary",
+  "NavigationClose",
+  "MonsterCard",
+  "Monster",
+  "docked",
+  "onRequestChange",
+  "h5",
+  "marginLeft",
+  "ContentArchive",
+  "ContentUnarchive",
+  "difficulty",
+  "amount",
+  "experienceThresholds",
+  "monsterCount",
+  "playerCount",
+  "multiplier",
+  "name",
+  "React",
+  "State",
+  "defaultState",
+]
+`;
+
+exports[`TypescriptParser TSX: Specific cases should parse the correct usages with "parseSource" 3`] = `
+Array [
+  "JSX",
+  "Element",
+  "chars",
+  "sortBy",
+  "Object",
+  "key",
+  "c",
+  "alive",
+  "dead",
+  "Row",
+  "Col",
+  "xs",
+  "h4",
+  "Table",
+  "onRowSelection",
+  "idx",
+  "TableHeader",
+  "displaySelectAll",
+  "adjustForCheckbox",
+  "TableRow",
+  "TableHeaderColumn",
+  "TableBody",
+  "displayRowCheckbox",
+  "showRowHover",
+  "char",
+  "style",
+  "cursor",
+  "TableRowColumn",
+  "span",
+  "title",
+  "colSpan",
+  "textAlign",
+  "IconButton",
+  "onClick",
+  "ImageEdit",
+  "FloatingActionButton",
+  "position",
+  "bottom",
+  "right",
+  "mini",
+  "ContentAdd",
+  "PlayerCharacter",
+  "React",
+  "Props",
+  "State",
+]
+`;
