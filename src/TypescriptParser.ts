@@ -1,5 +1,3 @@
-import { readFileSync } from 'fs';
-import { parse } from 'path';
 import {
     ClassDeclaration,
     createSourceFile,
@@ -19,21 +17,21 @@ import {
     SyntaxKind,
     TypeAliasDeclaration,
     VariableStatement,
-} from 'typescript';
+} from "typescript";
 
-import { parseClass } from './node-parser/class-parser';
-import { parseEnum } from './node-parser/enum-parser';
-import { parseExport } from './node-parser/export-parser';
-import { parseFunction } from './node-parser/function-parser';
-import { parseIdentifier } from './node-parser/identifier-parser';
-import { parseImport } from './node-parser/import-parser';
-import { parseInterface } from './node-parser/interface-parser';
-import { parseModule } from './node-parser/module-parser';
-import { traverseAst } from './node-parser/traverse-ast';
-import { parseTypeAlias } from './node-parser/type-alias-parser';
-import { parseVariable } from './node-parser/variable-parser';
-import { File } from './resources/File';
-import { Resource } from './resources/Resource';
+import { parseClass } from "./node-parser/class-parser";
+import { parseEnum } from "./node-parser/enum-parser";
+import { parseExport } from "./node-parser/export-parser";
+import { parseFunction } from "./node-parser/function-parser";
+import { parseIdentifier } from "./node-parser/identifier-parser";
+import { parseImport } from "./node-parser/import-parser";
+import { parseInterface } from "./node-parser/interface-parser";
+import { parseModule } from "./node-parser/module-parser";
+import { traverseAst } from "./node-parser/traverse-ast";
+import { parseTypeAlias } from "./node-parser/type-alias-parser";
+import { parseVariable } from "./node-parser/variable-parser";
+import { File } from "./resources/File";
+import { Resource } from "./resources/Resource";
 
 /**
  * Magic.happens('here');
@@ -57,68 +55,9 @@ export class TypescriptParser {
      */
     public async parseSource(source: string, scriptKind: ScriptKind = ScriptKind.TS): Promise<File> {
         return await this.parseTypescript(
-            createSourceFile(
-                'inline.tsx',
-                source,
-                ScriptTarget.ES2015,
-                true,
-                scriptKind),
-            '/');
-    }
-
-    /**
-     * Parses a single file into a parsed file.
-     *
-     * @param {string} filePath
-     * @param {string} rootPath
-     * @returns {Promise<File>}
-     *
-     * @memberof TsResourceParser
-     */
-    public async parseFile(filePath: string, rootPath: string): Promise<File> {
-        const parse = await this.parseFiles([filePath], rootPath);
-        return parse[0];
-    }
-
-    /**
-     * Parses multiple files into parsed files.
-     *
-     * @param {string[]} filePathes
-     * @param {string} rootPath
-     * @returns {Promise<File[]>}
-     *
-     * @memberof TsResourceParser
-     */
-    public async parseFiles(
-        filePathes: string[],
-        rootPath: string): Promise<File[]> {
-        return filePathes
-            .map((o) => {
-                let scriptKind: ScriptKind = ScriptKind.Unknown;
-                const parsed = parse(o);
-                switch (parsed.ext.toLowerCase()) {
-                    case 'js':
-                        scriptKind = ScriptKind.JS;
-                        break;
-                    case 'jsx':
-                        scriptKind = ScriptKind.JSX;
-                        break;
-                    case 'ts':
-                        scriptKind = ScriptKind.TS;
-                        break;
-                    case 'tsx':
-                        scriptKind = ScriptKind.TSX;
-                        break;
-                }
-                return createSourceFile(
-                    o,
-                    readFileSync(o).toString(),
-                    ScriptTarget.ES2015,
-                    true,
-                    scriptKind,
-                );
-            })
-            .map(o => this.parseTypescript(o, rootPath));
+            createSourceFile("inline.tsx", source, ScriptTarget.ES2015, true, scriptKind),
+            "/",
+        );
     }
 
     /**
