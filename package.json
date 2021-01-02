@@ -76,7 +76,7 @@
         }
     },
     "release": {
-        "pkgRoot": "lib/dist",
+        "pkgRoot": "dist",
         "plugins": [
             "@semantic-release/commit-analyzer",
             "@semantic-release/release-notes-generator",
