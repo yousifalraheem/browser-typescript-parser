@@ -17,7 +17,7 @@
         "format:staged": "pretty-quick --staged",
         "format:check": "pretty-quick --check",
         "commit": "git-cz",
-        "semantic-release": "semantic-release"
+        "release": "semantic-release"
     },
     "repository": {
         "type": "git",
