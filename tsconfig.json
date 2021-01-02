@@ -1,7 +1,21 @@
 {
-    "extends": "./config/tsconfig.base.json",
     "compilerOptions": {
-        "watch": true,
-        "sourceMap": true
-    }
+        "target": "ES5",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "removeComments": false,
+        "outDir": "dist",
+        "rootDir": "src",
+        "declaration": true,
+        "sourceMap": false,
+        "importHelpers": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "lib": ["ES2015", "DOM"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
 }

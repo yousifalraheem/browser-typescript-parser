@@ -1,0 +1,10 @@
+{
+    "collectCoverage": true,
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "testURL": "http://localhost/",
+    "testMatch": ["**/test/**/*.spec.ts"],
+    "testPathIgnorePatterns": ["/node_modules/", "_workspace/"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
+}
