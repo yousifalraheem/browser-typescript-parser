@@ -3,19 +3,17 @@
 This package is a TypeScript and ECMAScript parser. It uses the underlying typescript parser to generate
 a more or less human readable AST out of .js or .ts files.
 
-[![Build Status](https://travis-ci.org/yousifalraheem/browser-typescript-parser.svg)](https://travis-ci.org/yousifalraheem/browser-typescript-parser)
+[![Build Status](https://travis-ci.org/yousifalraheem/browser-browser-typescript-parser.svg)](https://travis-ci.org/yousifalraheem/browser-typescript-parser)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/j06bqjc4tkdt7sej?svg=true)](https://ci.appveyor.com/project/yousifalraheem/browser-typescript-parser)
-[![npm](https://img.shields.io/npm/v/typescript-parser.svg?maxAge=3600)](https://www.npmjs.com/package/typescript-parser)
+[![npm](https://img.shields.io/npm/v/browser-typescript-parser.svg?maxAge=3600)](https://www.npmjs.com/package/browser-typescript-parser)
 [![codecov](https://codecov.io/gh/yousifalraheem/browser-typescript-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/yousifalraheem/browser-typescript-parser)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Greenkeeper badge](https://badges.greenkeeper.io/yousifalraheem/browser-typescript-parser.svg)](https://greenkeeper.io/)
-[![Gitter](https://img.shields.io/gitter/room/browser-typescript-parser/Lobby.svg)](https://gitter.im/browser-typescript-parser/Lobby)
 
 ## How to use
 
 After you install the package via:
 
-[![NPM](https://nodei.co/npm/typescript-parser.png?downloads=true&stars=true)](https://nodei.co/npm/typescript-parser/)
+[![NPM](https://nodei.co/npm/typescript-parser.png?downloads=true&stars=true)](https://nodei.co/npm/browser-typescript-parser/)
 
 ### [View Source Docs](https://yousifalraheem.github.io/browser-typescript-parser/)
 
